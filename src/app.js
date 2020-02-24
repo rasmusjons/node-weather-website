@@ -24,19 +24,19 @@ app.use(express.static(publicDirectoryPath));
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather app',
-        name: 'Rasmus J',
+        name: 'Rasmus',
     });
 });
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'Me',
-        name: 'RJ',
+        name: 'Rasmus',
     });
 });
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help',
-        name: 'Ras-mus',
+        name: 'Rasmus',
     });
 });
 
@@ -72,13 +72,13 @@ app.get('/weather', (req, res) => {
 app.get('/help/*', (req, res) => {
     res.render('404', {
         title: 'Help Error',
-        name: 'sumsaR',
+        name: 'Rasmus',
     });
 });
 app.get('*', (req, res) => {
     res.render('404', {
         title: 'Error',
-        name: 'RasMus',
+        name: 'Rasmus',
     });
 });
 
