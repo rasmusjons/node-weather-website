@@ -10,7 +10,7 @@ let fetchWeather = search => {
         response.json().then(data => {
             if (data.error) {
                 console.log(data.error);
-                messageTwo.textContent = data.error;
+                messageOne.textContent = data.error;
             } else {
                 messageOne.textContent = data.location + ': ' + data.forecast;
             }
