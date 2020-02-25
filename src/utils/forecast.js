@@ -15,13 +15,16 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('unable to find location', undefined);
         } else {
+            console.log(body.daily.data[0]);
             callback(
                 undefined,
                 body.daily.data[0].summary +
-                    ' temp: ' +
+                    ' Temp: ' +
                     body.currently.temperature +
-                    ' rain risk: ' +
-                    body.currently.precipProbability,
+                    '. Risk of rain: ' +
+                    body.currently.precipProbability +
+                    '. UV-index is: ' +
+                    body.daily.data[0].uvIndex,
             );
         }
     });
